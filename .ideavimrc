@@ -5,13 +5,7 @@ set idearefactormode=keep
 
 nnoremap \e :e ~\.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
 sethandler <c-s> a:vim
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 nnoremap zc :action CollapseRegion<CR>
