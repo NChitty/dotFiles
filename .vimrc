@@ -12,11 +12,10 @@ set so=5
 " Sets yank/delete/paste functionality to 
 " interact with the system's clipboard, 
 " rather than internal vim registers
-set clipboard=unnamed " For Windows/MacOS
-" set clipboard=unnamedplus " For Linux
+" set clipboard=unnamed " For Windows/MacOS
+set clipboard=unnamedplus " For Linux
 
 let mapleader = " "
-
 
 " Add new line 
 " nmap <Enter> o<ESC>
