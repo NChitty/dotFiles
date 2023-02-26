@@ -1,18 +1,7 @@
-set hlsearch
-set ignorecase
-set smartcase
-set incsearch
-set wrapscan
-
-set gdefault
-set history=10000
-set scrolloff=5
+source ~/.vimrc
 set clipboard=unnamedplus,unnamed,ideaput
-set relativenumber
-set number
 set ideajoin
 set idearefactormode=keep
-let mapleader = " "
 
 nnoremap \e :e ~\.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
@@ -22,25 +11,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
-nnoremap <TAB> :action PreviousTab<CR>
-nnoremap <s-TAB> :action NextTab<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Normal Mode Vim annoyances
-
-nnoremap <c-d> <c-d>zz
-nnoremap <c-u> <c-u>zz
-nnoremap <c-f> <c-f>zz
-nnoremap <c-b> <c-b>zz
-nnoremap o o<Esc>
-nnoremap <leader>o o
-nnoremap O O<Esc>
-nnoremap <leader>O O
-nnoremap <c-a> ggvG
-nnoremap <leader>= :action ReformatCode<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vnoremap < <gv
-vnoremap > >gv
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 nnoremap zc :action CollapseRegion<CR>
@@ -59,4 +29,7 @@ nnoremap <Leader>q :action CloseContent<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <leader>f :action GotoFile<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>= :action ReformatCode<CR>
