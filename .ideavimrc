@@ -12,19 +12,32 @@ nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 nnoremap gc :action GotoClass<CR>
+nnoremap gf :action GotoFile<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotToDeclaration<CR>
 nnoremap gp :action GotToSuperMethod<CR>
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <c-e> :action GotoNextError<CR>
-nnoremap <c-E> :action GotoPreviousError<CR>
+nnoremap <leader>ne :action GotoNextError<CR>
+nnoremap <leader>pe :action GotoPreviousError<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>q :action CloseContent<CR>
-nnoremap <leader>b :action ShowNavBar<CR>
-nnoremap <leader>f :action GotoFile<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 nnoremap <leader>= :action ReformatCode<CR>
+nnoremap <leader>+ :action OptimizeImports<CR>
+
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
