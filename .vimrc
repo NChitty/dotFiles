@@ -17,9 +17,9 @@ set clipboard=unnamed " For Windows/MacOS
 
 let mapleader = " "
 
+nmap <c-s> :w<Enter>
+
 " Add new line 
-" nmap <Enter> o<ESC>
-" CHANGED BECAUSE <ENTER> INTERFERES WITH COMMAND-LINE WINDOW
 nmap o o<ESC>
 nmap <leader>o A<Enter>
 nmap O O<ESC>
@@ -32,9 +32,6 @@ nnoremap <c-d> <c-d>zz
 nnoremap <c-u> <c-u>zz
 nnoremap <c-f> <c-f>zz
 nnoremap <c-b> <c-b>zz
-
-" 'Clear Line' - Delete all text on the line, but leave the space in tact
-nmap cl ^d$
 
 " -------------------------------------------
 " Copy/Paste/Delete Behavior Modifications
@@ -93,4 +90,18 @@ vnoremap d "_d
 
 " Special visual delete saves values (like 'cut')
 vnoremap <leader>d d
+
+
+" ------
+" p/P
+" ------
+
+" Normal put does not save highlighted values
+xnoremap p "_dP
+
+" Leader put saves highlight to buffer
+xnoremap <leader>p p
+
+" Leader put saves highlight to buffer
+xnoremap <leader>P P
 
