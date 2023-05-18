@@ -23,3 +23,4 @@ function so-sshkeys () {
 
 	unset env
 }
+alias vim="nvim"
