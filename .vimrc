@@ -105,3 +105,14 @@ xnoremap <leader>p p
 " Leader put saves highlight to buffer
 xnoremap <leader>P P
 
+" -----------------
+" Just cool remaps
+" -----------------
+
+" Move selected line(s) up/down
+vnoremap J :m '>+1<CR>gv
+vnoremap K :m '<-2<CR>gv
+
+" Delete line below leave cursor
+nnoremap J mzJ`z
+
