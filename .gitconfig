@@ -1,0 +1,28 @@
+[user]
+	email = nicholas.chitty@nelnet.net
+	name = Nicholas Chitty
+[core]
+	autocrlf = true
+	editor = vim
+
+[alias]
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    
+    a = add
+    cm = commit -m
+
+    d = diff
+    dc = diff --cached
+    ds = diff --staged
+    dw = diff --color-words
+    dws = diff --color-words --staged
+
+    s = status -s
+    new = checkout -b
+    co = checkout
+
+    bl = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+    pr = pull -r origin
+
+    la = "!git config -l | grep alias | cut -c 7-"
+
