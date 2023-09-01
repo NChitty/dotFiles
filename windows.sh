@@ -12,7 +12,9 @@ main() {
 }
 
 crypto() {
-  tmux neww -c ~/Projects/crypto -n crypto \;
+  if command -v tmux &> /dev/null && [ -n "&PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    tmux new-session -A -s crypto -n crypto -c ~/Projects/crypto
+  fi
   case "$1" in
     api)
      tmux neww -n crypto-api -c ~/Projects/crypto/code/crypto-api \; \
