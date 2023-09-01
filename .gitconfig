@@ -7,8 +7,9 @@
 
 [alias]
     l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ll = log --oneline
     
-    a = add
+    ap = add -p
     cm = commit -m
 
     d = diff
@@ -19,11 +20,14 @@
 
     s = status -s
     new = checkout -b
-    co = checkout
+    swb = checkout
+
+    cont = rebase --continue
 
     bl = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     pr = pull -r origin
-    pu = "!git branch --show-curent | git push origin -u"
+    pu = "!git push origin -u \"$(git branch --show-current)\""
+    po = push origin
 
     la = "!git config -l | grep alias | cut -c 7-"
 
