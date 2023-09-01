@@ -115,4 +115,3 @@ vnoremap K :m '<-2<CR>gv
 
 " Delete line below leave cursor
 nnoremap J mzJ`z
-
