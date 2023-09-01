@@ -1,29 +1,24 @@
 alias python="python3.10"
 
-function so-sshkeys () {
-	env=~/.ssh/agent.env
-
-	agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
-
-	agent_start () {
-		(umask 077; ssh-agent >| "$env")
-		. "$env" >| /dev/null ; }
-
-	agent_load_env
-
-	# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
-	agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
-
-	if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
-		agent_start
-		ssh-add ~/.ssh/GitHub
-	elif [ "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 1 ]; then
-		ssh-add ~/.ssh/GitHub
-	fi
-
-	unset env
-}
-
 if command -v nvim &>/dev/null; then
     alias vim='nvim'
 fi
+
+function dlogs () {
+    docker compose logs -f $1
+}
+
+function dnames() {
+    for ID in `docker ps | awk '{print $1}' | grep -v 'CONTAINER'`
+    do
+    docker inspect $ID | grep Name | head -1 | awk '{print $2}' | sed 's/,//g' | sed 's%/%%g' | sed '/"//g'
+    done
+}
+
+alias dcr="docker compose run"
+alias dce="docker compose exec"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+
+alias windows="~/windows.sh"
+
