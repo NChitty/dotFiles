@@ -2,7 +2,7 @@
 	email = nicholas.chitty@nelnet.net
 	name = Nicholas Chitty
 [core]
-	autocrlf = true
+	autocrlf = input
 	editor = vim
 
 [alias]
@@ -10,6 +10,7 @@
     ll = log --oneline
     
     ap = add -p
+    a = add
     cm = commit -m
 
     d = diff
@@ -20,7 +21,7 @@
 
     s = status -s
     new = checkout -b
-    swb = checkout
+    co = checkout
 
     cont = rebase --continue
 
