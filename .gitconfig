@@ -1,7 +1,7 @@
 [user]
 	email = nicholas.chitty@gmail.com
 	name = Nicholas Chitty
-	signingkey = A7A60D5285D9D308
+	signingkey = 525666FBB2565BEA
 [core]
 	autocrlf = input
 	editor = vim
