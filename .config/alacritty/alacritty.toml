@@ -1,8 +1,9 @@
 [font]
-normal = { family = "RobotoMono Nerd Font Mono", style = "Regular" }
 bold = { family = "RobotoMono Nerd Font Mono", style = "Bold" }
-italic = { family = "RobotoMono Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "RobotoMono Nerd Font Mono", style = "Bold Italic" }
+italic = { family = "RobotoMono Nerd Font Mono", style = "Italic" }
+normal = { family = "RobotoMono Nerd Font Mono", style = "Regular" }
+size = 18
 
 
 # TokyoNight Alacritty Colors
