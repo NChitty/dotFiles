@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+SEARCH_PATHS=(~/personal ~/work)
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/personal ~/personal/vaults ~/work -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find "${SEARCH_PATHS[@]}" -type d -name ".git" -exec dirname {} \; | fzf)
 fi
 
 if [[ -z $selected ]]; then
