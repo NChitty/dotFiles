@@ -61,8 +61,16 @@ alias vim='nvim'
 
 # Shell Integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd --hook pwd zsh)"
+
+if [ -z $TMUX ]; then
+  tmux ls &> /dev/null
+  if [ $? -ne 0 ]; then
+    tmux new -s default -c $HOME \;
+  fi
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:$HOME/.local/bin"
