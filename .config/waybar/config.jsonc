@@ -1,0 +1,66 @@
+{
+  "position": "top",
+  "height": 40,
+  "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/media"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory", "clock", "custom/power"],
+  "reload_style_on_change": true,
+    // Modules configuration
+    "hyprland/supmap": {
+      "format": "<span style=\"italic\">{}</span>"
+    },
+    "hyprland/workspaces": {
+      "format": "{icon} {windows}",
+      "window-rewrite": {
+        "class<firefox> title<.*twitch.*>": "\udb81\udd43",
+        "class<firefox> title<.*youtube.*>": "\udb81\uddc3",
+        "class<firefox>": "\ue745",
+        "class<kitty> title<.*nvim.*>": "\uf36f",
+        "class<kitty>": "\uebca",
+        "class<discord>": "\uf1ff"
+      },
+      "on-click": "activate",
+      "sort-by-number": true
+    },
+    "network": {
+      "format-disconnected": "Disconnected",
+      "format-ethernet": "  {ipaddr}",
+      "format-linked": "󰄙 {ifname} (No IP)",
+      "format-wifi": "   {essid}",
+      "format-alt": "󱘖 {ifname}: {ipaddr}/{cidr}",
+      "tooltip-format": "{ifname} via {gwaddr} 󱂇"
+    },
+    "pulseaudio": {
+      "format": "{icon}   {volume}%",
+      "format-muted": " Muted",
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol --toggle-mute",
+      "on-click-right": "/home/fra/scripts/volume/on-off.sh"
+    },
+    "cpu": {
+      "format": "{usage}% ",
+      "tooltip": false
+    },
+    "memory": {
+      "format": "\uefc5   {used} GB"
+    },
+    "clock": {
+      "format": "{:%x %r}",
+      "tooltip": "false",
+      "format-alt": "{:%a %d %B %Y}"
+    //    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "custom/power": {
+      "format" : " ⏻ ",
+      "tooltip": false,
+      "menu": "on-click",
+      "menu-file": "/home/nchitty/.config/waybar/power_menu.xml",
+      "menu-actions": {
+        "shutdown": "shutdown now",
+        "reboot": "reboot"
+      }
+    }
+}
