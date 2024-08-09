@@ -35,7 +35,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     foreground = 'p:terminal-green'
     background = 'transparent'
-    template = '{{if ne .Profile "default"}} {{ .Profile }} {{end}}󰒋 {{ .Region }}'
+    template = ' {{if ne .Profile "default"}} {{ .Profile }} {{end}}󰒋 {{ .Region }}'
 
 [[blocks]]
   type = 'rprompt'
