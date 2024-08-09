@@ -35,6 +35,12 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   overflow = 'hidden'
 
   [[blocks.segments]]
+    type = 'aws'
+    style = 'plain'
+    foreground = 'p:terminal-green'
+    background = 'transparent'
+
+  [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
     foreground = 'yellow'
@@ -65,7 +71,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     "{{if eq .Code 0}}p:pistachio-green{{end}}",
   ]
   background = 'transparent'
-  template = '❯ '  
+  template = '❯ '
 
 [secondary_prompt]
   foreground = 'p:terminal-magenta'
