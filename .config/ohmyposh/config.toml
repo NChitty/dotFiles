@@ -30,15 +30,16 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       commit_icon = '@'
       fetch_status = true
 
-[[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
-
   [[blocks.segments]]
     type = 'aws'
     style = 'plain'
     foreground = 'p:terminal-green'
     background = 'transparent'
+    template = '{{if ne .Profile "default"}} {{ .Profile }} {{end}}󰒋 {{ .Region }}'
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
 
   [[blocks.segments]]
     type = 'executiontime'
