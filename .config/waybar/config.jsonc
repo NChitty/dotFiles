@@ -60,7 +60,8 @@
       "menu-file": "/home/nchitty/.config/waybar/power_menu.xml",
       "menu-actions": {
         "shutdown": "shutdown now",
-        "reboot": "reboot"
+        "reboot": "reboot",
+        "hibernate": "systemctl hibernate"
       }
     }
 }
