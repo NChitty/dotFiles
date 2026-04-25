@@ -12,6 +12,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Prompt
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
+eval "$(ssh-agent -s)"
 
 # Zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -62,6 +63,7 @@ alias vim='nvim'
 # Shell Integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd --hook pwd zsh)"
+eval "$(rbenv init -)"
 
 if [ -z $TMUX ]; then
   tmux ls &> /dev/null
