@@ -1,38 +1,38 @@
 [user]
 	email = nicholas.chitty@gmail.com
 	name = Nicholas Chitty
-	signingkey = 525666FBB2565BEA
+	signingkey = 8991C608385B748E
 [core]
 	autocrlf = input
 	editor = nvim
 
 [alias]
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-    ll = log --oneline
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	ll = log --oneline
 
-    a = add
-    ap = add -p
-    a = add
-    cm = commit -m
+	a = add
+	ap = add -p
+	a = add
+	cm = commit -m
 
-    d = diff
-    dc = diff --cached
-    ds = diff --staged
-    dw = diff --color-words
-    dws = diff --color-words --staged
+	d = diff
+	dc = diff --cached
+	ds = diff --staged
+	dw = diff --color-words
+	dws = diff --color-words --staged
 
-    s = status -s
-    new = checkout -b
-    co = checkout
+	s = status -s
+	new = checkout -b
+	co = checkout
 
-    cont = rebase --continue
+	cont = rebase --continue
 
-    bl = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-    pr = pull -r origin
-    pu = "!git push origin -u \"$(git branch --show-current)\""
-    po = push origin
+	bl = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+	pr = pull -r origin
+	pu = "!git push origin -u \"$(git branch --show-current)\""
+	po = push origin
 
-    la = "!git config -l | grep alias | cut -c 7-"
+	la = "!git config -l | grep alias | cut -c 7-"
 
 [init]
 	defaultBranch = main
